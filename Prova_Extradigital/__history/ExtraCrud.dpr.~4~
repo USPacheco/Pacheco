@@ -1,0 +1,17 @@
+program ExtraCrud;
+
+uses
+  Vcl.Forms,
+  Uprincipal in '.pas\Uprincipal.pas' {Frm_Principal},
+  UEmpresa in '.pas\UEmpresa.pas' {Frm_Empresa},
+  UDM in '.pas\UDM.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrm_Principal, Frm_Principal);
+  Application.CreateForm(TFrm_Empresa, Frm_Empresa);
+  Application.Run;
+end.
